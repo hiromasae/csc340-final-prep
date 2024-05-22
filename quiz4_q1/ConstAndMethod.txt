@@ -1,0 +1,26 @@
+  
+struct Point {
+  private: 
+    double x, y;
+    std::string label;
+
+  public:
+    Point();
+    Point(double xVal, double yVal);
+    double getX() const;
+    ...
+};
+
+
+(1) The definition above is part of Point_h. What does the const keyword mean in this context? Explain briefly
+    which variable it refers to and why we need it. 
+
+const in this context means that getX() is as constant member function. This means that getX() cannot change 
+any of the object's data members. We need it to ensure that the getX() function will not modify the state of
+the Point object.  
+
+
+(2) What are the differences between a method and a function in C++?
+
+All methods are functions but not all functions are methods. The term "method" is used when a function is part
+of a class. 

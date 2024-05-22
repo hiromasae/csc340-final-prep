@@ -1,0 +1,38 @@
+
+(a) Given the exact growth calculation 3000 + 5000N + 10N^2, what is the Big-O notation?
+
+O(N^2)
+
+In the following code, assume the variable size represents the number of items of data in the program.
+
+double getAvgInit(int nums[], int size) {   
+  int sum = 0;                              // once
+  double avg = 0;                           // once
+
+  for (int i = 0; i < size; i++) {          // once, N, N
+    for (int j = 0; j < size; j++) {        // N, N^2, N^2 
+      sum = sum + numes[i];                 // N^2
+      while (avg < size) {                  // N^3
+        avg++;                              // N^3
+      }
+    }
+    cout << endl;                           // N
+  }
+  avg = sum / size;                         // once
+
+  return avg;                               // once
+} // end getAvgInit()
+
+
+(b) In the code above, label the statements that occur only once, N times, N^2 times, and N^3 times.
+    Note: if a statement occurs N +- 1 times, for our purposes that is N times. Don't count the 
+    function declaration or comments.
+
+(c) What is the exact growth calculation for the code above?
+      
+5 + 4N + 3N^2 + 2N^3
+
+
+(d) What is the Big-O notation for the code above?
+
+O(N^3)

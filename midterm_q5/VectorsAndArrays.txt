@@ -1,0 +1,57 @@
+
+(a) What are the key differences between vectors and arrays?
+
+Vector: 
+- class: methods, bundled atributes
+- dynamically allocated, determine at runtime
+- pass by value - default, want mostly to pass by reference
+Array:
+- fundamental data type, manage data structure info like size, capacity
+- "fixed" - many aspects determined at compile time
+- default pass by reference (can't pass by value)
+
+
+(b) In what ways are they similar/related?
+
+- contiguous memory, pointer arithmetic
+- indexed, from 0
+- vector is array-based, array inside
+- similar usage
+
+
+(c) Declare a vector of integers, size of 100, each initialized to the value of 7.
+
+vector<int> intVector(100, 7);
+
+
+(d) Declare an array of characters, size of 50.
+
+char charArray[50];
+
+
+(e) For either an array or a vector (your choice) of double, set up your data structure so that there are 
+    400 elements in use but there is space for at least 700 total elements.
+
+vector<double> doubleVector(400, 1.0);
+doubleVector.reserve(700);
+
+double doubleArray[700];
+for (int i = 0; i < 400; i++) {
+  doubleArray[i] = 1.0;
+}
+
+
+(f) Explain why we would want to set up our vector or array as describe in the previous part (e).
+
+Performance optimization, future expansion, and to avoid memory fragmentation.
+
+
+(g) BONUS: Declare a two-dimensional vector of size 100x100 and type doubles.
+
+vector<vector<double>> 2dDoubleVector(100, vector<double>(100));
+
+
+(h) BONUS: Declare a two-dimensional array of size 5000x1000 and type integer. 
+
+int 2dIntArray[5000][1000];
+

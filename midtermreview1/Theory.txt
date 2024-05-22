@@ -1,0 +1,102 @@
+
+(1) What are the differences/similarities/connections between
+(a) strings and C strings?
+
+Differences: type, memory management, safety
+Similarities: representation, character access
+Connections: you can convert a C++ string to a C string 
+
+
+(b) arrays and vectors
+
+Differences: dynamicity, memory management, functions, safety
+Similarities: contiguous memory, indexed from 0
+Connections: usage, implementation, vector is array based
+
+
+(c) iterators and pointers
+
+Differences: complexity, operations, type, deletion
+Similarities: dereferencing, traversal
+Connections: iterators are a generalization of pointers, 
+             pointers are random access pointers
+
+
+(d) the stack and heap?
+
+Differences: allocation & deallocation, memory management, 
+             memory space, access
+Similarities: memory location, address space
+Connections: stack references the heap
+
+
+What are some examples of assigning values to (a)-(c) above?
+
+string cppStr = "Hello, world!";
+char cStr[50] = "Hello, world!";
+
+int arr[3] = { 1, 2, 3 }
+vector<int> vec{ 1, 2, 3}
+
+vector<int>::iterator it = vec.begin();
+int* ptr = &(arr.at(0));
+
+
+(2) What two questions do we need to answer about parameters that are 
+    being passed into a function? For instance, if we are passing in a vector
+    of strings, what do we have to decide about that parameter?
+
+Pass by value, or pass by reference?
+Const or non-const?
+
+
+(3) The "Kafe Search" algorithm is equal to or faster than Linear Search,
+    but not as fast as Binary Search. What is the O-notation for "Kafe Search"?
+
+    (a) 0(1)  
+    (b) O(2N)      = O(N)  
+    (c) O(N + N^2) = O(N^2)  
+    (d) O(.5N)     = O(N) 
+    (e) NlogN      = O(NlogN)  
+    (f) O(NlogN)  
+    (g) O(N)  
+    (h) N - O(N)   = O(N)  
+
+O(N)
+
+
+(4) What do we need to check before we open/use an output stream? An 
+    input stream?
+
+File existence. 
+
+
+(5) When writing a function that calls itself, what do we need to have to
+    make it work? What is the vocabulary to describe such a function and itself
+    key parts?
+
+Must have a base case and a recursive case. Make sure the recursive case 
+eventually reaches the base case to avoid an infinite loop.
+
+
+(6) Using vectors as an example, describe:
+(a) What is a reallocation?
+
+A process that occurs when a data structure like a vector needs to increase
+its capacity to accomodate more elements.
+
+vec.push_back(1);
+
+
+(b) What triggers a reallocation?
+
+When the current capacity of the vector is not enough to add another element.
+
+vec.push_back
+
+(c) Why do we want to avoid a reallocation if possible? 
+(d) What strategies can we use to avoid a reallocation? (Write some
+    brief code examples)
+
+ 
+ 

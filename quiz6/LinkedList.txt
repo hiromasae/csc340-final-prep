@@ -1,0 +1,55 @@
+(1) There is a class Node, containing as data one string per Node, which has the following methods available.
+
+// constructors 
+  Node();
+  Node(const std::string &inputStr);
+
+// accessor methods, allow setting and getting data and pointer values
+  void setData (const std:string &inputStr);
+  std::string getData() const;
+  void setNext (Node* givenNext);
+  Node* getNext() const;
+  void setPrev (Node* givenNext);
+  Node* getPrev() const;
+
+// comparison operators can be used directly on Nodes
+  // operator overload of comparison operators: Node v. Node
+  bool operator==(const Node& lhs, const Node& rhs);
+  bool operator<(const Node& lhs, const Node& rhs);
+  bool operator>(const Node& lhs, const Node& rhs);
+  bool operator<=(const Node& lhs, const Node& rhs);
+  bool operator>=(const Node& lhs, const Node& rhs);
+  bool operator!=(const Node& lhs, const Node& rhs);  
+
+  // operator overload of comparison operators: std::string v. Node
+  bool operator==(const std::string& lhs, const Node& rhs);
+  bool operator<(const std::string& lhs, const Node& rhs);
+  bool operator>(const std::string& lhs, const Node& rhs);
+  bool operator<=(const std::string& lhs, const Node& rhs);
+  bool operator>=(const std::string& lhs, const Node& rhs);
+  bool operator!=(const std::string& lhs, const Node& rhs);     
+
+  // operator overload of comparison operators: Node v. std::string
+  bool operator==(const Node& lhs, const std::string& rhs);
+  bool operator<(const Node& lhs, const std::string& rhs);
+  bool operator>(const Node& lhs, const std::string& rhs);
+  bool operator<=(const Node& lhs, const std::string& rhs);
+  bool operator>=(const Node& lhs, const std::string& rhs);
+  bool operator!=(const Node& lhs, const std::string& rhs);
+
+The Node class already exists - you can call the above methods.
+
+Given the Node class above,
+
+(a) Write a LinkedList class which keeps track of its size, head and end Nodes. Create both the .h and .cpp
+    files in full. Include appropriate getter/setter methods.
+
+(b) Include a default constructor for an empty list that initializes all attributes.
+
+(c) Include an appropriate deconstructor if necessary. 
+
+(d) Include a method which, given a string, creates and adds a new node on the end of the list. This push back
+    method would need to keep the LinkedList attributes updated when they change.
+
+(e) Overload the output operator << such that it can take a LinkedList object and output the whole list, one
+    string per line.

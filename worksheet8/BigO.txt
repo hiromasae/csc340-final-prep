@@ -1,0 +1,85 @@
+
+For the first two questions assume the variable size represents number of items of 
+data in the program.
+
+
+(1) Given the following code:
+  
+int count = 0;                          // once
+
+while (count < size) {                  // N
+  for (int j = 0; j < size; j++) {      // N, N^2, N^2 
+    my Array[count][j] = 'x';           // N^2
+  }
+  count ++;                             // N
+}
+cout << "Done!" << endl;                // once
+
+
+(a) In the code above, label the statements that only happen once, N times, N^2 
+    times, and N^3 times. 
+
+
+(b) What is the exact grown calculation?    
+      
+2 + 3N + 3N^2
+
+
+(c) What is the Big-O notation?
+      
+O(N^2)
+
+
+(2) 
+(a) What is the Big-O notation for 2 + 3N?
+
+O(N)
+
+
+(b) Write an example of code which could be measured at 2 + 3N. Be as exact
+    as possible.
+
+int count = 0;
+for (int j = 0; j < size; j++) {    
+  count++;
+  count++;
+}
+
+
+(3) 
+(a) What are the advantages and disadvantages of Linear Search?
+
+Advantages:
+  * most basic algorithm 
+  * best case time complexity is O(1)
+  * there is no addition memory requirement
+  * best search algorithm for small datasets
+
+Disadvantages:
+  * worst case time complexity is O(N)
+  * does not take advantage of sorted data
+  * takes the same amount time every time
+  * sequential access
+  * inefficient for large datasets
+
+
+(b) Of Binary Search?
+
+Advantages:
+  * time complexity of O(log n)
+  * very efficient for searching large sorted arrays
+  * memory-friendly, using less storage 
+  * random access
+
+Disadvantages:
+  * requires  sorted data
+  * struggles with repeated elements
+  * not efficient for small arrays
+
+(c) When would you use one or the other?
+
+Linear search:
+  unsorted data, small data sets, sequential access, minimal space
+
+Binary search:
+  sorted data, large data sets, random access, additional space
